@@ -1,0 +1,10 @@
+[Unit]
+Description=Remove AMD GPU from PCI bus
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "echo 1 > /sys/bus/pci/devices/0000:01:00.0/remove"
+
+[Install]
+WantedBy=multi-user.target
