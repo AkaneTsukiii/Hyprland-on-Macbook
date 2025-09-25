@@ -23,3 +23,10 @@ options root=/dev/nvme0n1p2 rw quiet splash modprobe.blacklist=amdgpu,radeon nom
 sudo nano /etc/systemd/system/remove-amdgpu.service
 
 sudo systemctl enable remove-amdgpu.service
+
+#DNS configure
+sudo nano /etc/systemd/resolved.conf
+
+[Resolve]
+DNS=1.1.1.1 1.0.0.1 8.8.8.8 8.8.4.4
+FallbackDNS=
