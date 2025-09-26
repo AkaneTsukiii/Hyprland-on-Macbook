@@ -14,7 +14,7 @@ modprobe.blacklist=amdgpu,radeon
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-#systemd-boot
+# systemd-boot
 sudo nano /boot/loader/entries/cachyos.conf
 
 options root=/dev/nvme0n1p2 rw quiet splash modprobe.blacklist=amdgpu,radeon nomodeset
