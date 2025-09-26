@@ -1,9 +1,9 @@
-# cmd-cfg
+# Blacklist AMD GPU 
 
 sudo nano /etc/modprobe.d/blacklist-amd.conf
 
-blacklist amdgpu
-blacklist radeon
+'blacklist amdgpu
+blacklist radeon'
 
 sudo mkinitcpio -P
 
